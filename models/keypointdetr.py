@@ -12,7 +12,6 @@ class KeypointDETR(nn.Module):
         super(KeypointDETR, self).__init__()
 
         self.query_num = args.query_num
-        self.dynamic = args.dynamic
 
         self.backbone = DGTBackbone(args)
 

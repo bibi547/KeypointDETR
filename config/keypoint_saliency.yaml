@@ -24,7 +24,6 @@ STRUCTURE:
   emb_dims: 1024
   global_pool_backbone: avg  # max or avg
   norm: instance
-  dynamic: True
   dropout: 0.
 
 TRAIN:
