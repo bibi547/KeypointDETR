@@ -8,7 +8,7 @@ def hungary_iou(dists, dist_thresh=0.1):
     pred_l = distances.shape[1]
     indice = linear_sum_assignment(distances)
     distances = distances[indice[0], indice[1]]
-    tp = np.sum(distances < dist_thresh + 0.001)
+    tp = np.sum(distances <= dist_thresh)
     return tp / (gt_l + pred_l - tp)
 
 
