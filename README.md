@@ -1,7 +1,5 @@
 # KeypointDETR: an end-to-end 3d keypoint detector
 
-KeypointDETR is accepted to ECCV 2024 as an oral presentation!
-
 ## Run
 
 ### 1. Extracting Geodesic Distance Maps
