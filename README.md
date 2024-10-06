@@ -13,7 +13,7 @@ Compute the shortest geodesic distance from points to the keypoints and save the
 
 ### 2. Config
 
-Modify the config[config/keypoint_saliency.yaml](https://github.com/bibi547/KeypointDETR/blob/master/config/keypoint_saliency.yaml) for your path, filename, and categories.
+Modify the config [config/keypoint_saliency.yaml](https://github.com/bibi547/KeypointDETR/blob/master/config/keypoint_saliency.yaml) for your path, filename, and categories.
 
 ### 5. Requirement
 
