@@ -1,0 +1,54 @@
+GENERAL:
+  experiment: keypoint_saliency
+  seed: 0
+
+DATA:
+  # data path
+  anno_dir: F:/dataset/keypointnet/annotations/all.json
+  split_root: F:/dataset/keypointnet/splits
+  pcd_root: F:/dataset/keypointnet/pcds
+  # sample
+  class_name: table
+  num_points: 2048
+  # augmentation
+  augmentation: True
+  normalize_pc: False
+  # landmark
+  landmark_std: 0.1
+
+STRUCTURE:
+  k: 20
+  input_channels: 3
+  query_num: 50
+  n_edgeconvs_backbone: 5
+  emb_dims: 1024
+  global_pool_backbone: avg  # max or avg
+  norm: instance
+  dynamic: True
+  dropout: 0.
+
+TRAIN:
+  max_epochs: 100
+  weight_decay: 0.0001
+  # batch_size per gpu
+  batch_size: 4
+  load_from_checkpoint:
+  resume_from_checkpoint:
+
+  # one cycle lr scheduler
+  lr_max: 0.0001 #0.0001
+  pct_start: 0.1    # percentage of the cycle spent increasing lr
+  div_factor: 25    # determine the initial lr (lr_max / div_factor)
+  final_div_factor: 1e4 #1e4   # determine the final lr (lr_max / final_div_factor)
+  start_epoch: 0
+
+  train_file: train.txt
+  train_workers: 2
+
+  val_file: val.txt
+  val_workers: 2
+
+  test_file: test.txt
+  test_workers: 0
+
+  debug: False
